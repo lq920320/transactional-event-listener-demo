@@ -1,0 +1,29 @@
+server:
+  port: 8999
+
+spring:
+  application:
+    name: event-demo-service
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/event_demo?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: abcd4321
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+# mybatis 相关配置
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+# actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
