@@ -50,7 +50,7 @@ public class EventServiceImpl extends ServiceImpl<CustomerMapper, Customer> impl
 
         Date now = new Date();
         customer.setCreateTime(now);
-        customer.setCreateBy(12);
+        customer.setCreateBy("12");
         customer.setUpdateTime(now);
         customer.setUpdateBy("A");
         customer.setIsDelete(false);

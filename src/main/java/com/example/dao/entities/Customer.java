@@ -24,7 +24,7 @@ public class Customer {
     /**
      * 创建人
      */
-    private Integer createBy;
+    private String createBy;
     /**
      * 创建时间
      */
